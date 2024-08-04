@@ -1,6 +1,6 @@
 export default function Profile() {
   return (
-    <>
+    <main>
       {/* Profile Page for Desktop and Tablet */}
       <section className="hidden xs:flex xs:w-[85%] xs:mx-auto md:my-[6.25rem] md:justify-between md:gap-x-[4.5rem] xs:mt-[2.5rem] xs:mb-[3.75rem] xs:gap-x-[2rem]">
         <div className="flex flex-col items-center justify-center">
@@ -61,6 +61,6 @@ export default function Profile() {
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }

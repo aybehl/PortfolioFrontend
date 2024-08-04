@@ -1,6 +1,6 @@
 export default function Footer(){
     return (
-        <footer className="bg-shade-of-dark-blue pt-[3.75rem] pb-[2.5rem] md:pt-10 md:pb-5">
+        <footer className="bg-shade-of-dark-blue pt-[3.75rem] pb-[2.5rem] md:pt-[3.75rem] md:pb-[2.5rem]">
           <div className="w-4/5 mx-auto flex flex-col md:flex-row gap-8 md:gap-[12.5rem] lg:gap-[18.25rem]">
             <div className="my-info">
               <div className="text-shade-of-white uppercase text-sm lg:text-2xl font-bold mb-2 text-center md:text-left">Ayushi Behl</div>
@@ -12,18 +12,22 @@ export default function Footer(){
               <div className="hidden md:block text-shade-of-white uppercase text-xs lg:text-2xl font-bold mb-2">Socials</div>
               <div className="flex gap-6 md:gap-3 justify-center md:justify-start">
                 <div>
-                  <picture>
-                    <source srcSet="./images/footer-section/social-icons/linkedln-icon-tablet.png" media="(min-width: 321px) and (max-width: 768px)" />
-                    <source srcSet="./images/footer-section/social-icons/linkedln-icon-mobile.png" media="(max-width: 320px)" />
-                    <img src="./images/footer-section/social-icons/linkedln.png" alt="LinkedIn icon" />
-                  </picture>
+                  <a href="https://www.linkedin.com/in/ayushi-behl-51a2bb163/" target="_blank">
+                    <picture>
+                        <source srcSet="./images/footer-section/social-icons/linkedln-icon-tablet.png" media="(min-width: 321px) and (max-width: 768px)" />
+                        <source srcSet="./images/footer-section/social-icons/linkedln-icon-mobile.png" media="(max-width: 320px)" />
+                        <img src="./images/footer-section/social-icons/linkedln.png" alt="LinkedIn icon" />
+                    </picture>
+                  </a>
                 </div>
                 <div>
-                  <picture>
-                    <source srcSet="./images/footer-section/social-icons/github-icon-tablet.png" media="(min-width: 321px) and (max-width: 768px)" />
-                    <source srcSet="./images/footer-section/social-icons/github-icon-mobile.png" media="(max-width: 320px)" />
-                    <img src="./images/footer-section/social-icons/github.png" alt="GitHub icon" />
-                  </picture>
+                  <a href="https://github.com/aybehl" target="_blank">
+                    <picture>
+                        <source srcSet="./images/footer-section/social-icons/github-icon-tablet.png" media="(min-width: 321px) and (max-width: 768px)" />
+                        <source srcSet="./images/footer-section/social-icons/github-icon-mobile.png" media="(max-width: 320px)" />
+                        <img src="./images/footer-section/social-icons/github.png" alt="GitHub icon" />
+                    </picture>
+                  </a>
                 </div>
                 <div>
                   <picture>

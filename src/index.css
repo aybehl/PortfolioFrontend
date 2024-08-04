@@ -31,3 +31,18 @@
 .shadow {
   box-shadow: 0px 4px 4px rgba(24, 49, 130, 1);
 }
+
+.active-nav-link {
+  color: var(--shade-of-purple);
+  text-decoration: underline;
+}
+
+.contact-button button {
+  transition: transform 0.1s ease;
+}
+
+.contact-button .active-button button {
+  transform: translateY(2px);
+  box-shadow: 0.2rem 0.5rem 4px rgba(14, 44, 128, 0.328);
+  background-color: var(--shade-of-light-blue);
+}
