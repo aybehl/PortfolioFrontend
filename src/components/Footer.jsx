@@ -3,8 +3,8 @@ export default function Footer(){
         <footer className="bg-shade-of-dark-blue pt-[3.75rem] pb-[2.5rem] md:pt-10 md:pb-5">
           <div className="w-4/5 mx-auto flex flex-col md:flex-row gap-8 md:gap-[12.5rem] lg:gap-[18.25rem]">
             <div className="my-info">
-              <div className="text-shade-of-white uppercase text-xs lg:text-2xl font-bold mb-2 text-center md:text-left">Ayushi Behl</div>
-              <div className="text-shade-of-lighter-purple lg:text-2xl text-sm font-normal w-full text-center md:text-left">
+              <div className="text-shade-of-white uppercase text-sm lg:text-2xl font-bold mb-2 text-center md:text-left">Ayushi Behl</div>
+              <div className="text-shade-of-lighter-purple lg:text-xl text-xs font-normal w-full text-center md:text-left">
                 A Full Stack Developer building the Frontend and Backend of Websites and Web Applications that leads to the success of the overall product.
               </div>
             </div>

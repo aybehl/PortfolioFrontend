@@ -14,7 +14,10 @@ export default {
         'shade-of-lighter-purple': 'var(--shade-of-lighter-purple)',
         'shade-of-light-blue': 'var(--shade-of-light-blue)',
         'shade-of-dark-blue': 'var(--shade-of-dark-blue)',
-      }
+      },
+      screens: {
+        'xs': '320px',  // Custom breakpoint for 320px
+      },
     },
   },
   plugins: [],

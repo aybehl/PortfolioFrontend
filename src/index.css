@@ -19,3 +19,15 @@
   box-sizing: border-box;
   font-family: 'Roboto', Arial, sans-serif;
 }
+
+.text-shadow {
+  text-shadow: 
+    -1px -1px 0 var(--shade-of-project-tags),
+    1px -1px 0 var(--shade-of-project-tags),
+    -1px 1px 0 var(--shade-of-project-tags),
+    1px 1px 0 var(--shade-of-project-tags);
+}
+
+.shadow {
+  box-shadow: 0px 4px 4px rgba(24, 49, 130, 1);
+}

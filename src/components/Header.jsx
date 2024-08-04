@@ -1,7 +1,7 @@
 export default function Header(){
     return (
         <>
-            <div className='w-11/12 mx-auto flex justify-between items-center py-2'>
+            <div className='w-[85%] mx-auto flex justify-between items-center py-2'>
                 <div className='logo'>
                     <picture>
                         <source srcSet="./images/header-section/header-logo-tablet.png" media="(min-width: 321px) and (max-width: 768px)" />
@@ -12,7 +12,7 @@ export default function Header(){
                 </div>
                 <div className="nav-menu hidden md:flex">
                     <nav>
-                        <ul className="flex justify-center items-center text-shade-of-light-blue font-medium list-none text-[clamp(0.75rem,2vw,1.25rem)] gap-[clamp(1rem,4vw,3rem)]">
+                        <ul className="flex justify-center items-center text-shade-of-light-blue font-medium list-none lg:text-[clamp(0.75rem,2.5vw,1.5rem)] text-[clamp(0.75rem,2vw,1.25rem)] gap-[clamp(1rem,4vw,3rem)]">
                             <li><a href="#" className="hover:text-shade-of-purple no-underline">About Me</a></li>
                             <li><a href="#" className="hover:text-shade-of-purple no-underline">Projects</a></li>
                             <li><a href="#" className="hover:text-shade-of-purple no-underline">Skills</a></li>
