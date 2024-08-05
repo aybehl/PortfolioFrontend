@@ -18,6 +18,9 @@ export default {
       screens: {
         'xs': '320px',  // Custom breakpoint for 320px
       },
+      fontFamily: {
+        'serif': ['"Roboto Serif"', 'serif'],
+      },
     },
   },
   plugins: [],
