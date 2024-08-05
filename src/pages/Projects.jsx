@@ -9,7 +9,8 @@ const mockData = [
     title: "Canada Road Ready",
     description: "Learning app to prepare for driving test in Canada. It is for people to practice and get familiar with the G1 exam.",
     tags: ["Javascript", "CSS", "HTML"],
-    imageAltText: "Car road exam evaluation"
+    imageAltText: "Car road exam evaluation",
+    link: "https://github.com/aybehl/frontend-web-dev-http-5122/tree/main/PetProject"
   },
   {
     imageTablet: "./images/project-section/online-bakery-image-tablet.jpeg",
@@ -18,7 +19,8 @@ const mockData = [
     title: "Online Bakery App",
     description: "An online bakery, implemented into a mobile application. This project was entirely created using Figma.",
     tags: ["Figma", "Prototypes", "Wireframes"],
-    imageAltText: "An image of a bakery shop"
+    imageAltText: "An image of a bakery shop",
+    link: "https://www.figma.com/design/miuCSZCfeirr00sEkNrLrA/Assignment4-Design-Sprint?node-id=0-1&t=55XUTo7szPolc7dS-0"
   },
   {
     imageTablet: "./images/project-section/google-calendar-image-tablet.jpeg",
@@ -27,7 +29,8 @@ const mockData = [
     title: "LLD of Google Calendar",
     description: "The Low Level Design of Google Calendar implemented using Design patterns in Java.",
     tags: ["Java", "GitHub", "System Design"],
-    imageAltText: "A girl checking out a Calendar"
+    imageAltText: "A girl checking out a Calendar",
+    link: "https://github.com/"
   }
 ];
 
@@ -58,6 +61,7 @@ export default function Projects() {
               description={project.description}
               tags={project.tags}
               imageAltText={project.imageAltText}
+              link={project.link}
             />
           ))}
         </div>

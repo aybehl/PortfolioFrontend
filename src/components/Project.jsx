@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Project = ({ imageTablet, imageMobile, image, title, imageAltText, description, tags }) => {
+const Project = ({ imageTablet, imageMobile, image, title, imageAltText, description, tags, link }) => {
   return (
     <div className="w-full flex xs:flex-row flex-col bg-shade-of-dark-blue border-2 border-shade-of-light-blue md:rounded-[1.25rem] xs:rounded-[0.75rem] rounded-[0.5rem] xs:gap-x-[1.5rem] gap-y-[0.5rem] md:p-[1.5rem] xs:p-[0.75rem] p-[0.5rem]">
       <div className="flex justify-center items-center flex-col">
@@ -34,11 +34,13 @@ const Project = ({ imageTablet, imageMobile, image, title, imageAltText, descrip
         </div>
         <div className="flex items-center xs:gap-x-[0.5rem] gap-[0.25rem]">
           <span className="md:text-[1rem] font-semibold text-shade-of-white text-[0.5rem]">View Project</span>
-          <picture className="flex justify-center items-center">
-            <source srcSet="./images/project-section/arrow-icon-tablet.svg" media="(min-width: 321px) and (max-width: 768px)" />
-            <source srcSet="./images/project-section/arrow-icon-mobile.svg" media="(max-width: 320px)" />
-            <img src="./images/project-section/arrow-icon.svg" alt="Arrow icon" className="max-w-full h-auto" />
-          </picture>
+          <a href={link} target="_blank">
+            <picture className="flex justify-center items-center">
+                <source srcSet="./images/project-section/arrow-icon-tablet.svg" media="(min-width: 321px) and (max-width: 768px)" />
+                <source srcSet="./images/project-section/arrow-icon-mobile.svg" media="(max-width: 320px)" />
+                <img src="./images/project-section/arrow-icon.svg" alt="Arrow icon" className="max-w-full h-auto" />
+            </picture>
+          </a>
         </div>
       </div>
     </div>
