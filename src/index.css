@@ -50,7 +50,7 @@
 input::placeholder, textarea::placeholder {
   color: var(--shade-of-lighter-purple);
   font-size: 1.25rem;
-  font-weight: 700; /*bold*/
+  font-weight: 700;
 }
 
 @media screen and (max-width: 768px) {
