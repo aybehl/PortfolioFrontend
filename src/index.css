@@ -33,8 +33,13 @@
 }
 
 .active-nav-link {
-  color: var(--shade-of-purple);
+  color: var(--shade-of-lighter-purple);
   text-decoration: underline;
+}
+
+.active-dropdown-link {
+  color: var(--shade-of-lighter-purple);
+  text-decoration: none;
 }
 
 .contact-button button {
