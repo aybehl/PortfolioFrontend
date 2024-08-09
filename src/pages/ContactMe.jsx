@@ -63,7 +63,7 @@ export default function ContactMe() {
           setApiResponse('Form submission failed');
         }
       } catch(error){
-        console.error(`POST request to submit request with error - ${error.message}`);
+        console.error(`Error occurred in POST request to submit contact form - ${error.message}`);
         setApiResponse('An error occurred while submitting the form');
       }
     } else {
