@@ -1,48 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Project from '../components/Project';
 
-const mockData = [
-  {
-    //imageTablet: "./images/project-section/canada-road-ready-image-tablet.jpeg",
-    //imageMobile: "./images/project-section/canada-road-ready-image-mobile.jpeg",
-    // image: "./images/project-section/canada-road-ready-image.jpeg",
-    imageTablet: "./images/project-section/personal-finance-tracker-image-tablet.jpg",
-    imageMobile: "./images/project-section/personal-finance-tracker-image.jpg",
-    image: "./images/project-section/personal-finance-tracker-image.jpg",
-    title: "Canada Road Ready",
-    description: "Learning app to prepare for driving test in Canada. It is for people to practice and get familiar with the G1 exam.",
-    tags: ["Javascript", "CSS", "HTML"],
-    imageAltText: "Car road exam evaluation",
-    link: "https://github.com/aybehl/frontend-web-dev-http-5122/tree/main/PetProject"
-  },
-  {
-    // imageTablet: "./images/project-section/online-bakery-image-tablet.jpeg",
-    // imageMobile: "./images/project-section/online-bakery-image-mobile.jpeg",
-    // image: "./images/project-section/online-bakery-image.jpeg",
-    imageTablet: "./images/project-section/restaurant-finder-image-tablet.jpg",
-    imageMobile: "./images/project-section/restaurant-finder-image.jpg",
-    image: "./images/project-section/restaurant-finder-image.jpg",
-    title: "Online Bakery App",
-    description: "An online bakery, implemented into a mobile application. This project was entirely created using Figma.",
-    tags: ["Figma", "Prototypes", "Wireframes"],
-    imageAltText: "An image of a bakery shop",
-    link: "https://www.figma.com/design/miuCSZCfeirr00sEkNrLrA/Assignment4-Design-Sprint?node-id=0-1&t=55XUTo7szPolc7dS-0"
-  },
-  {
-    // imageTablet: "./images/project-section/google-calendar-image-tablet.jpeg",
-    // imageMobile: "./images/project-section/google-calendar-image-mobile.jpeg",
-    // image: "./images/project-section/google-calendar-image.jpg",
-    imageTablet: "./images/project-section/snake-game-image-tablet.jpg",
-    imageMobile: "./images/project-section/snake-game-image.jpg",
-    image: "./images/project-section/snake-game-image.jpg",
-    title: "LLD of Google Calendar",
-    description: "The Low Level Design of Google Calendar implemented using Design patterns in Java.",
-    tags: ["Java", "GitHub", "System Design"],
-    imageAltText: "A girl checking out a Calendar",
-    link: "https://github.com/"
-  }
-];
-
 export default function Projects() {
   const [ projectsData, setProjectsData ] = useState([]);
 

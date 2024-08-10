@@ -1,45 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Hexagon = ({ src, name }) => (
     <div className="hexagon">
       <img src={src} alt={`${name} Logo`} className="lg:w-[60%] md:w-[50%] xs:w-[50%] w-[50%] xs:mt-0 mt-[-0.5rem]" />
-      <div className="text-center lg:text-[0.65rem] md:text-[0.5rem] xs:text-[0.35rem] text-[0.38rem] font-semibold text-shade-of-light-blue">{name}</div>
+      <div className="text-center lg:text-[0.65rem] md:text-[0.5rem] xs:text-[0.35rem] text-[0.38rem] font-normal text-black">{name}</div>
     </div>
 );
 
-const hexagonData = [
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "Typescript" },
-  { logo: "./images/skills-section/logos/css.svg", name: "SpringBoot" },
-  { logo: "./images/skills-section/logos/css.svg", name: "ElasticSearch" },
-  { logo: "./images/skills-section/logos/css.svg", name: "PHPMyAdmin" },
-  { logo: "./images/skills-section/logos/css.svg", name: "Javascript" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  { logo: "./images/skills-section/logos/css.svg", name: "CSS" },
-  
-
-  // Add more skill objects here...
-];
 export default function Skills() {
+    const [ hexagonData, setHexagonData ] = useState([]);
+
+    useEffect(() => {
+      const fetchSkillsData = async () => {
+       try{
+          const response = await fetch("http://localhost:8076/skills", {
+            method: "GET"
+          });
+
+          if(response.ok){
+            const data = await response.json();
+            setHexagonData(data.data);
+          }
+       } catch(error){
+        console.error(`Error occurred in GET request to fetch skills from backend - ${error.message}`);
+       }
+      };
+
+      fetchSkillsData();
+    }, []);
+
     return (
       <div>
         <section className="skills-page bg-gradient-to-b from-black to-[#6461CC] py-16 flex flex-col items-center">
@@ -57,17 +46,17 @@ export default function Skills() {
           {/* Hexagons for screens greater than 768px */}
           <div className="hidden md:grid grid-cols-10">
             {hexagonData.slice(0, 10).map((skill, index) => (
-              <Hexagon key={index} src={skill.logo} name={skill.name} />
+              <Hexagon key={index} src={skill.skill_logo} name={skill.skill_name} />
             ))}
           </div>
           <div className="hidden md:grid grid-cols-9 transform -translate-y-[1rem]">
             {hexagonData.slice(10, 19).map((skill, index) => (
-              <Hexagon key={index} src={skill.logo} name={skill.name} />
+              <Hexagon key={index} src={skill.skill_logo} name={skill.skill_name} />
             ))}
           </div>
           <div className="hidden md:grid grid-cols-8 transform -translate-y-[2rem]">
             {hexagonData.slice(19, 27).map((skill, index) => (
-              <Hexagon key={index} src={skill.logo} name={skill.name} />
+              <Hexagon key={index} src={skill.skill_logo} name={skill.skill_name} />
             ))}
           </div>
   
@@ -83,17 +72,17 @@ export default function Skills() {
           {/* Hexagons for screens lesser than 768px */}
           <div className="md:hidden grid grid-cols-5 gap-1">
             {hexagonData.slice(0, 5).map((skill, index) => (
-              <Hexagon key={index} src={skill.logo} name={skill.name} />
+              <Hexagon key={index} src={skill.skill_logo} name={skill.skill_name} />
             ))}
           </div>
           <div className="md:hidden grid grid-cols-4 gap-1">
             {hexagonData.slice(5, 9).map((skill, index) => (
-              <Hexagon key={index} src={skill.logo} name={skill.name} />
+              <Hexagon key={index} src={skill.skill_logo} name={skill.skill_name} />
             ))}
           </div>
           <div className="md:hidden grid grid-cols-5 gap-1">
             {hexagonData.slice(9, 14).map((skill, index) => (
-              <Hexagon key={index} src={skill.logo} name={skill.name} />
+              <Hexagon key={index} src={skill.skill_logo} name={skill.skill_name} />
             ))}
           </div>
   
@@ -108,17 +97,17 @@ export default function Skills() {
   
           <div className="md:hidden grid grid-cols-4 gap-1">
             {hexagonData.slice(14, 18).map((skill, index) => (
-              <Hexagon key={index} src={skill.logo} name={skill.name} />
+              <Hexagon key={index} src={skill.skill_logo} name={skill.skill_name} />
             ))}
           </div>
           <div className="md:hidden grid grid-cols-5 gap-1">
             {hexagonData.slice(18, 23).map((skill, index) => (
-              <Hexagon key={index} src={skill.logo} name={skill.name} />
+              <Hexagon key={index} src={skill.skill_logo} name={skill.skill_name} />
             ))}
           </div>
           <div className="md:hidden grid grid-cols-4 gap-1">
             {hexagonData.slice(23, 27).map((skill, index) => (
-              <Hexagon key={index} src={skill.logo} name={skill.name} />
+              <Hexagon key={index} src={skill.skill_logo} name={skill.skill_name} />
             ))}
           </div>
         </section>
