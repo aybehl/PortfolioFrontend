@@ -36,15 +36,16 @@ export default function ContactMe() {
   };
 
   const handleSubmit = async (e) => {
-    console.log(process.env.REACT_APP_BACKEND_URL);
     setErrors({});
     e.preventDefault();
 
     const formErrors = validateForm();
     
     if(Object.keys(formErrors).length === 0){
+      const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
       try {
-        const response = await fetch(`http://localhost:8076/contacts/add`, {
+        const response = await fetch(`${BACKEND_URL}/contacts/add`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

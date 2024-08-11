@@ -6,8 +6,10 @@ export default function Projects() {
 
   useEffect(() => {
     const fetchProjects = async () => {
+      const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
       try {
-        const response = await fetch("http://localhost:8076/projects", {
+        const response = await fetch(`${BACKEND_URL}/projects`, {
           method: 'GET',
         });
         

@@ -12,8 +12,10 @@ export default function Skills() {
 
     useEffect(() => {
       const fetchSkillsData = async () => {
+        const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
        try{
-          const response = await fetch("http://localhost:8076/skills", {
+          const response = await fetch(`${BACKEND_URL}/skills`, {
             method: "GET"
           });
 
