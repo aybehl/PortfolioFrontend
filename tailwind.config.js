@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
@@ -17,7 +16,6 @@ export default {
       },
       screens: {
         'xs': '320px',  // Custom breakpoint for 320px
-        
       },
       fontFamily: {
         'serif': ['"Roboto Serif"', 'serif'],
@@ -35,30 +33,28 @@ export default {
           flexDirection: 'column',
           margin: '0.25rem',
         },
-        '@media (max-width: 768px)': { //xs + xxs
+        '@media (max-width: 768px)': { // xs + xxs
           '.hexagon': {
             width: '2.5rem',
             height: '3rem',
-            backgroundImage: 'url("./images/skills-section/hexagon-mobile.svg")',
+            backgroundImage: 'url("/images/skills-section/hexagon-mobile.svg")',
           },
         },
-        '@media (min-width: 769px) and (max-width: 1024px)': { //md
+        '@media (min-width: 769px) and (max-width: 1024px)': { // md
           '.hexagon': {
             width: '3.5rem',
             height: '4.1rem',
-            backgroundImage: 'url("./images/skills-section/hexagon-tablet.svg")',
+            backgroundImage: 'url("/images/skills-section/hexagon-tablet.svg")',
           },
         },
-        '@media (min-width: 1025px)': { //lg
+        '@media (min-width: 1025px)': { // lg
           '.hexagon': {
             width: '5.5rem',
             height: '6.5rem',
-            backgroundImage: 'url("./images/skills-section/hexagon.svg")',
+            backgroundImage: 'url("/images/skills-section/hexagon.svg")',
           },
         },
       });
     },
   ],
-  
 }
-
