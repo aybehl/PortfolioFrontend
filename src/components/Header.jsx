@@ -20,7 +20,7 @@ export default function Header(){
                 <div className="nav-menu hidden md:flex">
                     <nav>
                         <ul className="flex justify-center items-center text-shade-of-light-blue font-medium list-none lg:text-[clamp(0.75rem,2.5vw,1.5rem)] text-[clamp(0.75rem,2vw,1.25rem)] gap-[clamp(1rem,4vw,3rem)]">
-                            <li>
+                            {/* <li>
                                 <NavLink to="/aboutMe" className={({isActive}) => isActive ? 'active-nav-link': 'hover:text-shade-of-purple no-underline'}>About Me</NavLink>
                             </li>
                             <li>
@@ -28,6 +28,15 @@ export default function Header(){
                             </li>
                             <li>
                                 <NavLink to="/skills" className={({isActive}) => isActive ? 'active-nav-link': 'hover:text-shade-of-purple no-underline'}>Skills</NavLink>
+                            </li> */}
+                            <li>
+                                <a href="#aboutMe" className="hover:text-shade-of-purple no-underline">About Me</a>
+                            </li>
+                            <li>
+                                <a href="#projects" className="hover:text-shade-of-purple no-underline">Projects</a>
+                            </li>
+                            <li>
+                                <a href="#skills" className="hover:text-shade-of-purple no-underline">Skills</a>
                             </li>
                         </ul>
                     </nav>

@@ -27,7 +27,7 @@ export default function Projects() {
   }, []);
   
   return (
-    <div>
+    <div id="projects">
       <section
         className="flex flex-col items-center justify-center md:pt-[3.75rem] md:pb-[6.25rem] bg-gradient-to-b from-[#615EC6] to-[#0A092D] md:gap-y-[3rem] xs:py-[3.75rem] xs:gap-y-[1rem] pt-[3rem] pb-[2.5rem] gap-y-[0.5rem]"
       >

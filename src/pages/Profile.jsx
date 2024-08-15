@@ -1,3 +1,7 @@
+import AboutMe from './AboutMe';
+import Projects from './Projects';
+import Skills from './Skills';
+
 export default function Profile() {
   return (
     <main>
@@ -61,6 +65,9 @@ export default function Profile() {
           </div>
         </div>
       </section>
+      <AboutMe/>
+      <Projects/>
+      <Skills/>
     </main>
   );
 }

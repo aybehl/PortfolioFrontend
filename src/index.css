@@ -32,11 +32,6 @@
   box-shadow: 0px 4px 4px rgba(24, 49, 130, 1);
 }
 
-.active-nav-link {
-  color: var(--shade-of-lighter-purple);
-  text-decoration: underline;
-}
-
 .active-dropdown-link {
   color: var(--shade-of-lighter-purple);
   text-decoration: none;
