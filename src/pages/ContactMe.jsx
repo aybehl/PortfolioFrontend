@@ -83,7 +83,7 @@ export default function ContactMe() {
           Contact Me<span className="text-shade-of-lighter-purple">.</span>
           <div className="absolute bottom-[-2px] left-0 w-full h-[0.125rem] bg-shade-of-lighter-purple rounded-md md:bottom-[-4px]" />
         </div>
-        <div className="hidden md:text-[1.5rem] xs:text-[0.75rem] font-semibold text-shade-of-white text-center md:mb-[4rem] xs:mb-[2.75rem] xs:w-[70%] xs:block">
+        <div className="hidden md:text-[1.5rem] xs:text-[0.75rem] font-normal text-shade-of-white text-center md:mb-[4rem] xs:mb-[2.75rem] xs:w-[70%] xs:block">
             Feel free to contact me by submitting the form below and I will get back to you as soon as possible
         </div>
 
