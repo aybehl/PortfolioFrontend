@@ -32,7 +32,7 @@ export default function Skills() {
     }, []);
 
     return (
-      <div id="skills">
+      <div>
         <section className="skills-page bg-gradient-to-b from-black to-[#6461CC] py-16 flex flex-col items-center">
             <div className="flex flex-col items-center justify-center w-full md:mb-[2rem] mb-0">
                 <div className="relative md:text-[2rem] xs:text-[1rem] font-semibold mb-[2rem] text-shade-of-white font-serif xs:mb-[1.25rem]">

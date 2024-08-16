@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function AboutMe() {
   return (
-    <div id="aboutMe">
+    <div>
       <section
         className="flex flex-col items-center justify-center text-[1rem] py-[2.5rem] md:pt-[5rem] md:pb-[5.25rem] bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('./images/about-me-section/about-me-background.png')" }}

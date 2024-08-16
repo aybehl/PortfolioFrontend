@@ -29,7 +29,7 @@ export default function Header(){
                             <li>
                                 <NavLink to="/skills" className={({isActive}) => isActive ? 'active-nav-link': 'hover:text-shade-of-purple no-underline'}>Skills</NavLink>
                             </li> */}
-                            <li>
+                            {/* <li>
                                 <a href="#aboutMe" className="hover:text-shade-of-purple no-underline">About Me</a>
                             </li>
                             <li>
@@ -37,6 +37,15 @@ export default function Header(){
                             </li>
                             <li>
                                 <a href="#skills" className="hover:text-shade-of-purple no-underline">Skills</a>
+                            </li> */}
+                            <li>
+                                <NavLink to="/" state={{ scrollTo: 'aboutMe' }} className="hover:text-shade-of-purple no-underline">About Me</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/" state={{ scrollTo: 'projects' }} className="hover:text-shade-of-purple no-underline">Projects</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/" state={{ scrollTo: 'skills' }} className="hover:text-shade-of-purple no-underline">Skills</NavLink>
                             </li>
                         </ul>
                     </nav>
@@ -57,7 +66,7 @@ export default function Header(){
                 <div className={`md:hidden ${dropdownOpen ? 'block' : 'hidden'} bg-shade-of-dark-blue text-shade-of-white border-shade-of-lighter-purple border-2 rounded-[0.25rem] absolute top-[70%] right-0 w-[50%] z-50`}>
                     <nav>
                         <ul className="flex flex-col items-center list-none gap-1 text-[clamp(0.75rem,2vw,1.25rem)] p-[1rem]">
-                            <li className='border-b-2 w-full'>
+                            {/* <li className='border-b-2 w-full'>
                                 <NavLink to="/aboutMe" className={({isActive}) => isActive ? 'active-dropdown-link': 'hover:text-shade-of-purple no-underline'}>About Me</NavLink>
                             </li>
                             <li className='border-b-2 w-full'>
@@ -68,6 +77,18 @@ export default function Header(){
                             </li>
                             <li className="w-full">
                                 <NavLink to="/contactMe" className={({isActive}) => isActive ? 'active-dropdown-link': 'hover:text-shade-of-purple no-underline'}>Contact Me</NavLink>
+                            </li> */}
+                            <li className='border-b-2 w-full'>
+                                <NavLink to="/" state={{ scrollTo: 'aboutMe' }} className="hover:text-shade-of-purple no-underline">About Me</NavLink>
+                            </li>
+                            <li className='border-b-2 w-full'>
+                                <NavLink to="/" state={{ scrollTo: 'projects' }} className="hover:text-shade-of-purple no-underline">Projects</NavLink>
+                            </li>
+                            <li className='border-b-2 w-full'>
+                             <NavLink to="/" state={{ scrollTo: 'skills' }} className="hover:text-shade-of-purple no-underline">Skills</NavLink>
+                            </li>
+                            <li className="w-full">
+                                <NavLink to="/contactMe" className="hover:text-shade-of-purple no-underline">Contact Me</NavLink>
                             </li>
                         </ul>
                     </nav>

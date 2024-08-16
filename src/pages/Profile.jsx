@@ -1,8 +1,21 @@
+import { useLocation } from 'react-router-dom';
 import AboutMe from './AboutMe';
 import Projects from './Projects';
 import Skills from './Skills';
+import { useEffect } from 'react';
 
 export default function Profile() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if(location.state?.scrollTo){
+      const element = document.getElementById(location.state.scrollTo);
+      if(element){
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   return (
     <main>
       {/* Profile Page for Desktop and Tablet */}
@@ -65,9 +78,20 @@ export default function Profile() {
           </div>
         </div>
       </section>
-      <AboutMe/>
-      <Projects/>
-      <Skills/>
+      {/* About Me Section */}
+      <section id="aboutMe">
+        <AboutMe />
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects">
+        <Projects />
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills">
+        <Skills />
+      </section>
     </main>
   );
 }
